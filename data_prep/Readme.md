@@ -1,3 +1,10 @@
+The python file LLaVA_InitialJson.py will make the json data in the customised required format for LLaVA model to work on.
+The python file LLaVA_dataSplit.py will perform the data splitting.
+
+
+
+
+
 Use the following command line prompt to runs the .py files to generate the data splits
 
 
