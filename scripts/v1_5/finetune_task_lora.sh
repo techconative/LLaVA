@@ -1,12 +1,12 @@
 #!/bin/bash
 
-deepspeed llava/train/train_mem.py \
+deepspeed "${PWD}/../../llava/train/train_mem.py" \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
-    --deepspeed ./scripts/zero3.json \
+    --deepspeed "${PWD}/../zero3.json" \
     --model_name_or_path liuhaotian/llava-v1.5-7b \
     --version v1 \
-    --data_path /home/akash/data/LLAVA_data.json \
-    --image_folder /home/akash/data/ \
+    --data_path "${PWD}/../../data_prep/splitted_data/split_json_files/train_json.json" \
+    --image_folder "${PWD}/../../data_prep/splitted_data/" \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
