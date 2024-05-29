@@ -4,8 +4,6 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [FAQ](#faq)
 
 ## Introduction
 Welcome to the LLaVA DSL Gen Project! This project is designed to demonstrate how to install and navigate through this repository.
@@ -36,6 +34,7 @@ Welcome to the LLaVA DSL Gen Project! This project is designed to demonstrate ho
 
 _For the purpose of running the current codes use the llava_new venev._
 
+## Usage
 ### Finetuning Guide
 To start finetuning, run the _LLaVA/scripts/v1_5/finetune_task_lora.sh_ with the desired hyperparameter settings. 
 
@@ -44,7 +43,7 @@ In addition to existing steps, the current repository also offers additional fea
 
 1. _LLaVA_InitialJson.py_ will prepare your initial custom data inot the desired LLaVA dataset format and return a .json file useful for the next steps.
    ```shell
-   Syntax: python file_name.py --input_folder_with_gui_and_png_files --output_folder_to_store_json_file
+   Syntax: python LLaVA_IntialJson.py --input_folder_with_gui_and_png_files --output_folder_to_store_json_file
    ```
 
 2. _LLaVA_dataSplit.py_ will split your data intp the required train_eval_test split. Default value will be 80_10_10.
